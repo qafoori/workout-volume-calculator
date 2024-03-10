@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://qafoori.github.io/volumes",
+  "homepage": "https://qafoori.github.io/workout-volume-calculator",
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
