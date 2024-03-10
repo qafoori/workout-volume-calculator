@@ -1,1 +1,1 @@
-# workout-volume-calculator
+# Calculate the volume of your workout program
