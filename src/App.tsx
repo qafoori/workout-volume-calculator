@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 
-import { Container } from "@mantine/core";
+import { Container, ScrollArea } from "@mantine/core";
 
 import { Footer, Header, Item, ResultModal } from "./components";
 import { useCalculator, useTrainings } from "./hooks";
@@ -25,26 +25,30 @@ export const App: FC = () => {
   };
 
   return (
-    <Container>
+    <Container h="100%">
       <ResultModal
         results={calculationResult?.results || null}
         totalVolume={calculationResult?.totalVolume || null}
         onClose={closeModal}
       />
 
-      <Header />
+      <ScrollArea w="100%" h="calc(100% - 140px)">
+        <Container miw={600}>
+          <Header />
 
-      {trainings.map((training) => (
-        <Item
-          {...training}
-          key={training.id}
-          onRemove={on.removeTraining}
-          onWriteSet={on.writeSet}
-          onWriteRep={on.writeRep}
-          onWriteWeight={on.writeWeight}
-          onWriteExercise={on.writeExercise}
-        />
-      ))}
+          {trainings.map((training) => (
+            <Item
+              {...training}
+              key={training.id}
+              onRemove={on.removeTraining}
+              onWriteSet={on.writeSet}
+              onWriteRep={on.writeRep}
+              onWriteWeight={on.writeWeight}
+              onWriteExercise={on.writeExercise}
+            />
+          ))}
+        </Container>
+      </ScrollArea>
 
       <Footer onAddItem={on.addRawTraining} onCalculate={handleOnCalculate} />
     </Container>

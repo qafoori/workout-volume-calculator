@@ -15,7 +15,7 @@ export const Footer: FC<FooterProps> = ({ onCalculate, onAddItem }) => {
       <Gap />
 
       <Grid>
-        <Grid.Col span={10}>
+        <Grid.Col span={{ sm: 10 }}>
           <Button
             fullWidth
             variant="light"
@@ -26,7 +26,7 @@ export const Footer: FC<FooterProps> = ({ onCalculate, onAddItem }) => {
           </Button>
         </Grid.Col>
 
-        <Grid.Col span={2}>
+        <Grid.Col span={{ sm: 2 }}>
           <Button
             onClick={onCalculate}
             fullWidth
