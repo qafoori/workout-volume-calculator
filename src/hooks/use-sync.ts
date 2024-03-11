@@ -13,7 +13,6 @@ export const useSync = (
 
     if (synchronizedTrainings) {
       try {
-        console.log(JSON.parse(synchronizedTrainings))
         setTrainings(JSON.parse(synchronizedTrainings));
       } catch (error) {
         alert("Invalid trainings are synchronized, Starting from scratch");

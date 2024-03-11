@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-import { findIndex, uniqueId } from "lodash";
+import { findIndex } from "lodash";
 
 import { Training } from "../types";
+import { randomId } from "../utils";
 
 const createRawTraining = (): Training => ({
-  id: uniqueId(),
+  id: randomId(),
   exerciseId: null,
   reps: 0,
   sets: 0,
